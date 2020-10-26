@@ -18,7 +18,27 @@
         </div>
       </div>
     </div>
-    <button class="button is-primary">button</button>
+    <div class="button is-static is-outlined is-success source-icon">
+      <span class="icon-news"></span>
+    </div>
+
+    <div class="button is-static is-outlined is-warning source-icon">
+      <span class="icon-google"></span>
+    </div>
+    <div class="button is-static is-outlined is-danger source-icon">
+      <span class="icon-youtube"></span>
+    </div>
+
+    <div class="button is-static is-outlined is-info source-icon">
+      <span class="icon-twitter"></span>
+    </div>
+
+    <button class="button is-primary">
+      <span class="mdi mdi-plus"></span>NEW
+    </button>
+    <button class="button is-primary">
+      <span class="mdi mdi-eye-off"></span>
+    </button>
   </form>
 </template>
 

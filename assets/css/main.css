@@ -1,4 +1,16 @@
 @font-face {
+  font-family: 'icomoon';
+  src: url('../fonts/icomoon.eot?inqeic');
+  src: url('../fonts/icomoon.eot?inqeic#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?inqeic') format('truetype'),
+    url('../fonts/icomoon.woff?inqeic') format('woff'),
+    url('../fonts/icomoon.svg?inqeic#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: fallback;
+}
+
+@font-face {
   font-family: 'Open Sans';
   src: url('../fonts/OpenSans-Regular.eot');
   src: local('../fonts/Open Sans Regular'), local('../fonts/OpenSans-Regular'),
@@ -45,4 +57,100 @@
     /* reducing base font size will reduce all rem sizes */
     font-size: 13px !important;
   }
+}
+.source-icon {
+  font-family: 'icomoon';
+  font-size: 2rem !important;
+  width: 2em !important;
+  height: 2em !important;
+}
+
+.mdi {
+  font-size: 1.2rem;
+}
+
+.mdi-24px {
+  font-size: 1.5rem;
+}
+
+.mdi-48px {
+  font-size: 3rem;
+}
+
+.mdi:before,
+.mdi-set {
+  display: block;
+  font: normal normal normal 24px/1 'icomoon';
+  font-size: inherit;
+  text-rendering: auto;
+  line-height: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-minus:before {
+  content: '\e901';
+}
+.icon-down:before {
+  content: '\e902';
+}
+.icon-up:before {
+  content: '\e904';
+}
+.icon-left:before {
+  content: '\e905';
+}
+.icon-dislike:before {
+  content: '\e906';
+}
+.icon-comment:before {
+  content: '\e907';
+}
+.icon-email:before {
+  content: '\e908';
+}
+.icon-share:before {
+  content: '\e90a';
+}
+.icon-right:before {
+  content: '\e90b';
+}
+.icon-like:before {
+  content: '\e909';
+}
+.icon-google:before {
+  content: '\e90c';
+}
+.icon-news:before {
+  content: '\e90d';
+}
+.icon-youtube:before {
+  content: '\e90e';
+}
+
+.icon-twitter:before {
+  content: '\e90f';
+  color: #1da1f2;
+}
+
+.mdi-close:before {
+  content: '\e900';
+}
+.mdi-plus:before {
+  content: '\e903';
+}
+.mdi-remove:before {
+  content: '\e911';
+}
+.mdi-alert-circle:before {
+  content: '\e910';
+}
+.mdi-check:before {
+  content: '\e912';
+}
+.mdi-eye:before {
+  content: '\e913';
+}
+.mdi-eye-off:before {
+  content: '\e914';
 }

@@ -34,6 +34,11 @@ export default {
     '@nuxtjs/pwa'
   ],
 
+  buefy: {
+    // css: false,
+    materialDesignIcons: false
+  },
+
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
