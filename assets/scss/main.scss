@@ -13,9 +13,12 @@ $text: #0000008a;
 $live-warning: #ffc107;
 $live-success: #79a719;
 $live-info: #38a1f3;
+$live-link: #23295d;
 
 // Update Bulma's global variables
 $family-sans-serif: 'Open Sans', sans-serif;
+$widescreen-enabled: true;
+$fullhd-enabled: false;
 $navbar-background-color: transparent;
 $navbar-item-hover-background-color: transparent;
 $navbar-breakpoint: $mobile;
@@ -24,6 +27,7 @@ $navbar-item-img-max-height: 3.5rem;
 $warning: $live-warning;
 $success: $live-success;
 $info: $live-info;
+$link: $live-link;
 
 // Update some of Bulma's component variables
 $body-background-color: $beige-lighter;

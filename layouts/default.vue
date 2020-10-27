@@ -1,9 +1,5 @@
 <template>
-  <section class="hero-body">
-    <div class="container">
-      <nuxt />
-    </div>
-  </section>
+  <div><nuxt /></div>
 </template>
 
 <style></style>

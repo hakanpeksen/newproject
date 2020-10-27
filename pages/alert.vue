@@ -1,5 +1,8 @@
 <template>
-  <div><mainheader /></div>
+  <div>
+    <mainheader />
+    alert
+  </div>
 </template>
 
 <script>
@@ -7,13 +10,8 @@ import mainheader from '@/components/mainheader'
 export default {
   components: {
     mainheader
-  },
-  data() {
-    return {
-      isOpen: false
-    }
   }
 }
 </script>
 
-<style></style>
+<style scoped></style>

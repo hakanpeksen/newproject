@@ -9,12 +9,19 @@ export default {
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
+  loading: {
+    color: 'white',
+    height: '1px'
+  },
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: ['~/assets/css/main.css'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [],
+  router: {
+    linkExactActiveClass: 'is-active'
+  },
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
