@@ -1,7 +1,7 @@
 <template>
   <div>
     <mainheader />
-    alert
+    alert sayfası
   </div>
 </template>
 
