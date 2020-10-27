@@ -49,20 +49,19 @@
   font-display: swap;
 }
 
-@media screen and (min-width: 351px) {
-  /* width:350px- 400 px arası  font-size:13px olur */
-
-  /* width:351px de, font-size:13px olur */
-  html {
-    /* reducing base font size will reduce all rem sizes */
-    font-size: 13px !important;
-  }
-}
 .source-icon {
   font-family: 'icomoon';
   font-size: 2rem !important;
   width: 2em !important;
   height: 2em !important;
+}
+.lt-icon {
+  font-family: 'icomoon';
+  font-size: 1rem;
+}
+.yt-icon {
+  font-family: 'icomoon';
+  font-size: 1.5rem;
 }
 
 .mdi {
@@ -88,69 +87,84 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-minus:before {
-  content: '\e901';
-}
 .icon-down:before {
-  content: '\e902';
+  content: '\e916';
 }
 .icon-up:before {
-  content: '\e904';
+  content: '\e917';
 }
 .icon-left:before {
-  content: '\e905';
-}
-.icon-dislike:before {
-  content: '\e906';
-}
-.icon-comment:before {
-  content: '\e907';
-}
-.icon-email:before {
-  content: '\e908';
-}
-.icon-share:before {
-  content: '\e90a';
+  content: '\e918';
 }
 .icon-right:before {
-  content: '\e90b';
+  content: '\e919';
 }
-.icon-like:before {
+.icon-dislike:before {
+  content: '\e911';
+}
+.icon-email:before {
+  content: '\e912';
+}
+.icon-send:before {
+  content: '\e913';
+}
+.icon-comment:before {
+  content: '\e906';
+}
+.icon-trash:before {
+  content: '\e907';
+}
+.icon-close:before {
+  content: '\e908';
+}
+.icon-check:before {
   content: '\e909';
 }
-.icon-google:before {
+.icon-minus:before {
+  content: '\e90a';
+}
+.icon-plus:before {
+  content: '\e90b';
+}
+.icon-share:before {
   content: '\e90c';
 }
-.icon-news:before {
+.icon-twitter:before {
   content: '\e90d';
 }
 .icon-youtube:before {
   content: '\e90e';
 }
-
-.icon-twitter:before {
+.icon-google:before {
   content: '\e90f';
-  color: #1da1f2;
 }
-
-.mdi-close:before {
-  content: '\e900';
-}
-.mdi-plus:before {
-  content: '\e903';
-}
-.mdi-remove:before {
-  content: '\e911';
-}
-.mdi-alert-circle:before {
+.icon-news:before {
   content: '\e910';
 }
-.mdi-check:before {
-  content: '\e912';
+
+.icon-like:before {
+  content: '\e914';
 }
-.mdi-eye:before {
-  content: '\e913';
+
+/* material icons */
+.mdi-alert-circle:before {
+  content: '\e915';
 }
 .mdi-eye-off:before {
-  content: '\e914';
+  content: '\e900';
+}
+.mdi-eye:before {
+  content: '\e901';
+}
+.mdi-remove:before {
+  content: '\e902';
+}
+.mdi-check:before {
+  content: '\e904';
+}
+.mdi-plus:before {
+  content: '\e905';
+}
+.mdi-close:before {
+  content: '\e903';
 }
