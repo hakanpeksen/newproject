@@ -12,8 +12,9 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "precommit": "npm run lint",
-    "css-build": "node-sass --omit-source-map-url assets/scss/main.scss node_modules/buefy/dist/buefy.css",
-    "postinstall": "npm rebuild node-sass && npm install --unsafe-perm -f node-sass"
+    "postinstall": "npm rebuild node-sass sass-loader && npm install --unsafe-perm -f node-sass sass-loader",
+    "css-build": "node-sass --omit-source-map-url assets/scss/main.scss node_modules/buefy/dist/buefy.css"
+
 
   },
   "dependencies": {
