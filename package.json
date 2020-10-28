@@ -7,6 +7,7 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
+    "postinstall": "npm rebuild node-sass && npm install --unsafe-perm -f node-sass",
     "heroku-postbuild": "npm run build",
     "work": "cross-env NODE_ENV=development nodemon server/index.js --watch server",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
