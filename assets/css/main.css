@@ -9,42 +9,44 @@
   font-style: normal;
   font-display: fallback;
 }
-
 @font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Regular.eot');
-  src: local('../fonts/Open Sans Regular'), local('../fonts/OpenSans-Regular'),
-    url('../fonts/OpenSans-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/OpenSans-Regular.woff2') format('woff2'),
-    url('../fonts/OpenSans-Regular.woff') format('woff'),
-    url('../fonts/OpenSans-Regular.ttf') format('truetype');
-  font-weight: normal;
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik-Medium.eot');
+  src: local('../fonts/Rubik Medium'), local('../fonts/Rubik-Medium'),
+    url('../fonts/Rubik-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Rubik-Medium.woff2') format('woff2'),
+    url('../fonts/Rubik-Medium.woff') format('woff'),
+    url('../fonts/Rubik-Medium.ttf') format('truetype'),
+    url('../fonts/Rubik-Medium.svg#Rubik-Medium') format('svg');
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-Light.eot');
-  src: local('../fonts/Open Sans Light'), local('../fonts/OpenSans-Light'),
-    url('../fonts/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/OpenSans-Light.woff2') format('woff2'),
-    url('../fonts/OpenSans-Light.woff') format('woff'),
-    url('../fonts/OpenSans-Light.ttf') format('truetype');
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik-Light.eot');
+  src: local('../fonts/Rubik Light'), local('../fonts/Rubik-Light'),
+    url('../fonts/Rubik-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Rubik-Light.woff2') format('woff2'),
+    url('../fonts/Rubik-Light.woff') format('woff'),
+    url('../fonts/Rubik-Light.ttf') format('truetype'),
+    url('../fonts/Rubik-Light.svg#Rubik-Light') format('svg');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Open Sans';
-  src: url('../fonts/OpenSans-SemiBold.eot');
-  src: local('../fonts/Open Sans SemiBold'), local('../fonts/OpenSans-SemiBold'),
-    url('../fonts/OpenSans-SemiBold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/OpenSans-SemiBold.woff2') format('woff2'),
-    url('../fonts/OpenSans-SemiBold.woff') format('woff'),
-    url('../fonts/OpenSans-SemiBold.ttf') format('truetype');
-  font-weight: 600;
+  font-family: 'Rubik';
+  src: url('../fonts/Rubik-Regular.eot');
+  src: local('../fonts/Rubik Regular'), local('../fonts/Rubik-Regular'),
+    url('../fonts/Rubik-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Rubik-Regular.woff2') format('woff2'),
+    url('../fonts/Rubik-Regular.woff') format('woff'),
+    url('../fonts/Rubik-Regular.ttf') format('truetype'),
+    url('../fonts/Rubik-Regular.svg#Rubik-Regular') format('svg');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
@@ -86,6 +88,26 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+/* custom css *******/
+.image img.is-radius {
+  border-radius: 6px;
+}
+
+.vcenter {
+  align-items: center !important;
+}
+
+.badge {
+  position: absolute;
+  margin: 6px 0 0 -10px;
+  padding-left: 0.5em !important;
+  padding-right: 0.5em !important;
+  height: 1.7em !important;
+}
+.width3 {
+  width: 3em;
+}
+/* custom css  *******/
 
 .icon-down:before {
   content: '\e916';
