@@ -7,9 +7,10 @@
 // @import "~bulma/sass/elements/table";
 
 // Set your brand colors
-$beige-lighter: #fafafa;
+$bg-lighter: #fafafa;
 $mobile: 769px;
 $text: #0000008a;
+$live-blue: #3273dc;
 $live-warning: #ffc107;
 $live-success: #79a719;
 $live-info: #38a1f3;
@@ -26,11 +27,12 @@ $navbar-height: 5rem;
 $navbar-item-img-max-height: 3.5rem;
 $warning: $live-warning;
 $success: $live-success;
+$primary: $live-blue;
 $info: $live-info;
 $link: $live-link;
 
 // Update some of Bulma's component variables
-$body-background-color: $beige-lighter;
+$body-background-color: $bg-lighter;
 
 $sizeUnit: em;
 $marginKey: 'm';

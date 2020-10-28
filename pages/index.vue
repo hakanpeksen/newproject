@@ -12,7 +12,7 @@
             </div>
             <div class="media-content">
               <div class="content">
-                <h1 class="has-text-weight-medium">NEWS</h1>
+                <h1 class="has-text-weight-medium is-marginless">NEWS</h1>
               </div>
             </div>
           </article>

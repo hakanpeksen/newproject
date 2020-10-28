@@ -35,6 +35,26 @@
   src: local('Rubik Regular'), local('Rubik-Regular'),
     url('../fonts/Rubik-Regular.woff') format('woff');
 }
+@media screen and (max-width: 350px) {
+  html {
+    /* reducing base font size will reduce all rem sizes */
+    font-size: 12px !important;
+  }
+}
+
+@media screen and (min-width: 351px) {
+  html {
+    /* reducing base font size will reduce all rem sizes */
+    font-size: 13px !important;
+  }
+}
+
+@media screen and (min-width: 401px) {
+  html {
+    /* reducing base font size will reduce all rem sizes */
+    font-size: 15px !important;
+  }
+}
 
 .source-icon {
   font-family: 'icomoon';
@@ -100,6 +120,10 @@
 }
 .content h4 {
   margin-bottom: 0.5em !important;
+}
+.new-form label.label {
+  font-size: 1.2rem !important;
+  font-weight: 400 !important;
 }
 
 /* CUSTOM CSS  END *******/
