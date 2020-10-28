@@ -45,6 +45,16 @@ export default {
     // css: false,
     materialDesignIcons: false
   },
+  manifest: {
+    name: 'New Project',
+    short_name: 'New Project',
+    description: 'Trend',
+    theme_color: '#e5396b'
+  },
+
+  icon: {
+    sizes: [48, 72, 96, 120, 144, 152, 192, 256, 384, 512]
+  },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},

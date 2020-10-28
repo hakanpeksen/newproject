@@ -11,44 +11,29 @@
 }
 @font-face {
   font-family: 'Rubik';
-  src: url('../fonts/Rubik-Medium.eot');
-  src: local('../fonts/Rubik Medium'), local('../fonts/Rubik-Medium'),
-    url('../fonts/Rubik-Medium.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Rubik-Medium.woff2') format('woff2'),
-    url('../fonts/Rubik-Medium.woff') format('woff'),
-    url('../fonts/Rubik-Medium.ttf') format('truetype'),
-    url('../fonts/Rubik-Medium.svg#Rubik-Medium') format('svg');
   font-weight: 500;
   font-style: normal;
   font-display: swap;
+  src: local('Rubik Medium'), local('Rubik-Medium'),
+    url('../fonts/Rubik-Medium.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('../fonts/Rubik-Light.eot');
-  src: local('../fonts/Rubik Light'), local('../fonts/Rubik-Light'),
-    url('../fonts/Rubik-Light.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Rubik-Light.woff2') format('woff2'),
-    url('../fonts/Rubik-Light.woff') format('woff'),
-    url('../fonts/Rubik-Light.ttf') format('truetype'),
-    url('../fonts/Rubik-Light.svg#Rubik-Light') format('svg');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
+  src: local('Rubik Light'), local('Rubik-Light'),
+    url('../fonts/Rubik-Light.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Rubik';
-  src: url('../fonts/Rubik-Regular.eot');
-  src: local('../fonts/Rubik Regular'), local('../fonts/Rubik-Regular'),
-    url('../fonts/Rubik-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/Rubik-Regular.woff2') format('woff2'),
-    url('../fonts/Rubik-Regular.woff') format('woff'),
-    url('../fonts/Rubik-Regular.ttf') format('truetype'),
-    url('../fonts/Rubik-Regular.svg#Rubik-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+  src: local('Rubik Regular'), local('Rubik-Regular'),
+    url('../fonts/Rubik-Regular.woff') format('woff');
 }
 
 .source-icon {
@@ -88,7 +73,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/* custom css *******/
+/* CUSTOM CSS START *******/
 .image img.is-radius {
   border-radius: 6px;
 }
@@ -107,7 +92,17 @@
 .width3 {
   width: 3em;
 }
-/* custom css  *******/
+.navbar.is-link .navbar-brand > a.navbar-item:hover,
+.navbar.is-link .navbar-brand > a.navbar-item.is-active,
+.navbar.is-link .navbar-brand .navbar-link:hover,
+.navbar.is-link .navbar-brand .navbar-link.is-active {
+  background-color: transparent !important;
+}
+.content h4 {
+  margin-bottom: 0.5em !important;
+}
+
+/* CUSTOM CSS  END *******/
 
 .icon-down:before {
   content: '\e916';

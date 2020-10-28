@@ -16,7 +16,11 @@
               </div>
             </div>
           </article>
-
+          <div>
+            <p class="m-t-lg m-b-lg has-text-weight-light">
+              Last update: 9 hours ago
+            </p>
+          </div>
           <article class="media">
             <div class="media-left width3">
               <p class="is-size-4">
