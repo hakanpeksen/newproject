@@ -1,5 +1,8 @@
 <template>
-  <div><mainheader /></div>
+  <div>
+    <mainheader />
+    <section>test</section>
+  </div>
 </template>
 
 <script>
