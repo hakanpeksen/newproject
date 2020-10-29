@@ -126,6 +126,15 @@
   font-weight: 400 !important;
 }
 
+/* .splash-bg {
+  background: url(../images/splash_bg.svg) center center no-repeat;
+  background-size: auto 100%;
+} */
+
+.splash-bg {
+  background: url(../images/resim5.svg) center center no-repeat;
+  background-size: auto 100%;
+}
 /* CUSTOM CSS  END *******/
 .icon-dislike:before {
   content: '\e914';

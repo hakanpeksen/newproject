@@ -1,79 +1,66 @@
 <template>
-  <div>
-    <mainheader />
-    <div class="hero-body">
-      <div class="container">
-        <form method="post" @submit.prevent="signinUser">
-          <div class="columns">
-            <div class="column is-6 is-offset-3">
-              <div class="box has-background-lighter">
-                <div class="p-md">
-                  <div class="content p-b-lg">
-                    <h1 class="has-text-centered has-text-weight-normal">
-                      Welcome Login
-                    </h1>
-                  </div>
+  <form method="post" @submit.prevent="signinUser">
+    <div class="columns">
+      <div class="column is-6 is-offset-3">
+        <div class="box has-background-lighter">
+          <div class="p-md">
+            <div class="content p-b-lg">
+              <h1 class="has-text-centered has-text-weight-normal">
+                Welcome Login
+              </h1>
+            </div>
 
-                  <b-message :active.sync="isError" type="is-danger">
-                    {{ errorMessage }}
-                  </b-message>
+            <b-message :active.sync="isError" type="is-danger">
+              {{ errorMessage }}
+            </b-message>
 
-                  <b-field
-                    class="p-t-xs new-form"
-                    label="Email"
-                    label-for="email"
-                  >
-                    <b-input
-                      id="email"
-                      v-model="userForm.email"
-                      type="text"
-                      size="is-medium"
-                      placeholder="Email address"
-                      required
-                      autofocus
-                    />
-                  </b-field>
-                  <b-field
-                    class="p-t-md new-form"
-                    label="Password"
-                    label-for="password"
-                  >
-                    <b-input
-                      id="password"
-                      v-model="userForm.password"
-                      type="password"
-                      size="is-medium"
-                      placeholder="Password"
-                      required
-                      password-reveal
-                    />
-                  </b-field>
-                  <div class="field p-t-md has-text-right">
-                    <div class="control">
-                      <button
-                        type="submit"
-                        name="button"
-                        class="button is-medium is-primary is-fullwidth"
-                      >
-                        Sign in
-                      </button>
-                    </div>
-                  </div>
-                </div>
+            <b-field class="p-t-xs new-form" label="Email" label-for="email">
+              <b-input
+                id="email"
+                v-model="userForm.email"
+                type="text"
+                size="is-medium"
+                placeholder="Email address"
+                required
+                autofocus
+              />
+            </b-field>
+            <b-field
+              class="p-t-md new-form"
+              label="Password"
+              label-for="password"
+            >
+              <b-input
+                id="password"
+                v-model="userForm.password"
+                type="password"
+                size="is-medium"
+                placeholder="Password"
+                required
+                password-reveal
+              />
+            </b-field>
+            <div class="field p-t-md has-text-right">
+              <div class="control">
+                <button
+                  type="submit"
+                  name="button"
+                  class="button is-medium is-primary is-fullwidth"
+                >
+                  Sign in
+                </button>
               </div>
             </div>
           </div>
-        </form>
+        </div>
       </div>
     </div>
-  </div>
+  </form>
 </template>
 <script>
-import mainheader from '~/components/mainheader'
 export default {
-  components: {
-    mainheader
-  },
+  layout: 'herolight',
+  components: {},
   //   asyncData ({ store, redirect }) {
   //     if (store.state.auth.loggedIn === true) {
   //       return redirect('/alert')
@@ -114,7 +101,7 @@ export default {
   //   },
   head() {
     return {
-      title: 'Login'
+      title: 'Sign in'
     }
   }
 }

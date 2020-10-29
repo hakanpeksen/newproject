@@ -2,7 +2,8 @@
   <header>
     <nav
       id="navMain"
-      class="navbar is-link"
+      class="navbar"
+      :class="[theme === 'light' ? '' : 'is-link']"
       role="navigation"
       aria-label="main navigation"
     >
@@ -35,11 +36,33 @@
           class="navbar-menu has-text-right"
         >
           <div class="navbar-end">
-            <n-link to="/news" class="navbar-item has-text-white">
+            <n-link
+              to="/news"
+              class="navbar-item"
+              :class="[theme === 'light' ? '' : 'has-text-white']"
+            >
               News
             </n-link>
-            <n-link to="/alert" class="navbar-item has-text-white">
+            <n-link
+              to="/alert"
+              class="navbar-item"
+              :class="[theme === 'light' ? '' : 'has-text-white']"
+            >
               Alerts
+            </n-link>
+            <n-link
+              to="/signin"
+              class="navbar-item"
+              :class="[theme === 'light' ? '' : 'has-text-white']"
+            >
+              Sign in
+            </n-link>
+            <n-link
+              to="/signup"
+              class="navbar-item"
+              :class="[theme === 'light' ? '' : 'has-text-white']"
+            >
+              Create account
             </n-link>
           </div>
         </div>
@@ -50,6 +73,12 @@
 
 <script>
 export default {
+  props: {
+    theme: {
+      type: String,
+      required: true
+    }
+  },
   data() {
     return {
       isOpen: false
