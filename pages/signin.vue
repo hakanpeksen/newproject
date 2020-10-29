@@ -18,7 +18,7 @@
               <b-input
                 id="email"
                 v-model="userForm.email"
-                type="text"
+                type="email"
                 size="is-medium"
                 placeholder="Email address"
                 required
@@ -40,6 +40,14 @@
                 password-reveal
               />
             </b-field>
+            <div class="field p-t-sm p-b-md new-form">
+              <b-checkbox class="is-pulled-left"> Remember me </b-checkbox>
+              <div class="has-text-right is-pulled-right">
+                <n-link to="/reset-password" class="has-text-primary">
+                  Forgot Password?
+                </n-link>
+              </div>
+            </div>
             <div class="field p-t-md has-text-right">
               <div class="control">
                 <button
@@ -52,6 +60,12 @@
               </div>
             </div>
           </div>
+        </div>
+        <div class="p-t-sm has-text-centered">
+          Don't have an account?
+          <n-link to="/signup" class="has-text-primary">
+            Create account for free
+          </n-link>
         </div>
       </div>
     </div>

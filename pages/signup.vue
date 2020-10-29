@@ -1,13 +1,23 @@
 <template>
   <div class="container">
-    <form method="post" @submit.prevent="signinUser">
+    <div v-if="sendForm === true">
+      <message
+        :issuccess="issuccess"
+        :title="title"
+        :message="message"
+        :iconclass="iconclass"
+        :buttontext="buttontext"
+        :buttonlink="buttonlink"
+      />
+    </div>
+    <form method="post" @submit.prevent="signupUser">
       <div class="columns">
         <div class="column is-6 is-offset-3">
           <div class="box has-background-lighter">
             <div class="p-md">
               <div class="content p-b-lg">
                 <h1 class="has-text-centered has-text-weight-normal">
-                  Welcome Login
+                  Create account
                 </h1>
               </div>
 
@@ -19,7 +29,7 @@
                 <b-input
                   id="email"
                   v-model="userForm.email"
-                  type="text"
+                  type="email"
                   size="is-medium"
                   placeholder="Email address"
                   required
@@ -38,6 +48,7 @@
                   size="is-medium"
                   placeholder="Password"
                   required
+                  minlength="5"
                   password-reveal
                 />
               </b-field>
@@ -48,11 +59,15 @@
                     name="button"
                     class="button is-medium is-primary is-fullwidth"
                   >
-                    Sign in
+                    Create an account
                   </button>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="p-t-sm has-text-centered">
+            Already got an account?
+            <n-link to="/signin" class="has-text-primary"> Signin </n-link>
           </div>
         </div>
       </div>
@@ -60,9 +75,12 @@
   </div>
 </template>
 <script>
+import message from '@/components/message'
 export default {
   layout: 'herolight',
-  components: {},
+  components: {
+    message
+  },
   //   asyncData ({ store, redirect }) {
   //     if (store.state.auth.loggedIn === true) {
   //       return redirect('/alert')
@@ -74,10 +92,24 @@ export default {
         email: '',
         password: ''
       },
+      sendForm: false,
       isError: false,
       errorMessage: null
     }
   },
+  methods: {
+    signupUser() {
+      this.sendForm = true
+      this.issuccess = true
+      this.title = 'Check your email!'
+      this.message = `We've emailed a special link to ${this.userForm.email}. Click the link to confirm your address and get started.`
+      this.iconclass = 'icon-email'
+      this.buttontext = ''
+      this.buttonlink = ''
+      this.isError = false
+    }
+  },
+
   //   methods: {
   //     async signinUser () {
   //       try {

@@ -49,7 +49,7 @@ export default {
     name: 'New Project',
     short_name: 'New Project',
     description: 'Trend',
-    theme_color: '#e5396b'
+    theme_color: '#23295d'
   },
 
   icon: {
