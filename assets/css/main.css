@@ -127,7 +127,12 @@
 }
 
 /* CUSTOM CSS  END *******/
-
+.icon-dislike:before {
+  content: '\e914';
+}
+.icon-like:before {
+  content: '\e915';
+}
 .icon-down:before {
   content: '\e916';
 }
@@ -139,9 +144,6 @@
 }
 .icon-right:before {
   content: '\e919';
-}
-.icon-dislike:before {
-  content: '\e911';
 }
 .icon-email:before {
   content: '\e912';
@@ -183,13 +185,9 @@
   content: '\e910';
 }
 
-.icon-like:before {
-  content: '\e914';
-}
-
 /* material icons */
 .mdi-alert-circle:before {
-  content: '\e915';
+  content: '\e911';
 }
 .mdi-eye-off:before {
   content: '\e900';
@@ -200,12 +198,12 @@
 .mdi-remove:before {
   content: '\e902';
 }
+.mdi-close:before {
+  content: '\e903';
+}
 .mdi-check:before {
   content: '\e904';
 }
 .mdi-plus:before {
   content: '\e905';
-}
-.mdi-close:before {
-  content: '\e903';
 }
