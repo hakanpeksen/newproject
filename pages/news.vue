@@ -1,7 +1,7 @@
 <template>
   <div>
     <mainheader theme="dark" />
-    <section>
+    <section class="section">
       <div class="container p-sm">
         <article class="media vcenter">
           <div class="media-left">
@@ -20,6 +20,81 @@
             Last update: 9 hours ago
           </p>
         </div>
+        <article class="media">
+          <div class="media-left width3">
+            <p class="is-size-4">
+              1
+              <span class="lt-icon icon-up has-text-success"></span>
+            </p>
+          </div>
+          <figure class="media-left">
+            <p class="image is-96x96">
+              <a href="">
+                <span class="tag is-link badge">NEW</span>
+                <img
+                  src="https://storage.googleapis.com/trendimageseu/tr-news-1603845060-1.jpg"
+                  alt=""
+                  class="is-radius"
+              /></a>
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <h4 class="has-text-weight-medium">başlık</h4>
+              <span>Son dakika haberi</span>
+            </div>
+          </div>
+        </article>
+        <article class="media">
+          <div class="media-left width3">
+            <p class="is-size-4">
+              1
+              <span class="lt-icon icon-up has-text-success"></span>
+            </p>
+          </div>
+          <figure class="media-left">
+            <p class="image is-96x96">
+              <a href="">
+                <span class="tag is-link badge">NEW</span>
+                <img
+                  src="https://storage.googleapis.com/trendimageseu/tr-news-1603845060-1.jpg"
+                  alt=""
+                  class="is-radius"
+              /></a>
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <h4 class="has-text-weight-medium">başlık</h4>
+              <span>Son dakika haberi</span>
+            </div>
+          </div>
+        </article>
+        <article class="media">
+          <div class="media-left width3">
+            <p class="is-size-4">
+              1
+              <span class="lt-icon icon-up has-text-success"></span>
+            </p>
+          </div>
+          <figure class="media-left">
+            <p class="image is-96x96">
+              <a href="">
+                <span class="tag is-link badge">NEW</span>
+                <img
+                  src="https://storage.googleapis.com/trendimageseu/tr-news-1603845060-1.jpg"
+                  alt=""
+                  class="is-radius"
+              /></a>
+            </p>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <h4 class="has-text-weight-medium">başlık</h4>
+              <span>Son dakika haberi</span>
+            </div>
+          </div>
+        </article>
         <article class="media">
           <div class="media-left width3">
             <p class="is-size-4">

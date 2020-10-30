@@ -1,7 +1,7 @@
 <template>
   <div>
     <mainheader theme="dark" />
-    alert sayfası
+    <section class="section">alert sayfası</section>
   </div>
 </template>
 

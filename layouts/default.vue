@@ -1,9 +1,13 @@
 <template>
-  <div><nuxt /></div>
+  <div><nuxt /> <mainfooter /></div>
 </template>
 <script>
+import mainfooter from '~/components/mainfooter'
 export default {
-  name: 'Default'
+  name: 'Default',
+  components: {
+    mainfooter
+  }
 }
 </script>
 

@@ -125,6 +125,9 @@
   font-size: 1.2rem !important;
   font-weight: 400 !important;
 }
+.footer {
+  padding: 3rem 1.5rem 1rem !important;
+}
 
 /* .splash-bg {
   background: url(../images/splash_bg.svg) center center no-repeat;

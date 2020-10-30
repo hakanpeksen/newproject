@@ -10,10 +10,8 @@
       <div class="container p-l-sm p-r-sm">
         <div class="navbar-brand">
           <n-link class="navbar-item" to="/" no-prefetch>
-            <h1>Logo</h1>
-            <img src="" width="" alt="" />
+            <img src="~/assets/images/newlogo.svg" width="100" alt="" />
           </n-link>
-
           <a
             role="button"
             aria-controls="contentIdForA11y2"
