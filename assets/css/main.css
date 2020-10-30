@@ -135,8 +135,8 @@
 } */
 
 .splash-bg {
-  background: url(../images/resim5.svg) center center no-repeat;
-  background-size: auto 100%;
+  background: url(../images/bg.svg) center center no-repeat;
+  /* // background-size: auto 100%; */
 }
 /* CUSTOM CSS  END *******/
 /* buefy ******/
