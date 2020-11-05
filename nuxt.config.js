@@ -18,7 +18,9 @@ export default {
   css: ['~/assets/css/main.css'],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [],
+  plugins: [
+    // .client will only be run client side on initial app load
+  ],
   router: {
     linkExactActiveClass: 'is-active'
   },

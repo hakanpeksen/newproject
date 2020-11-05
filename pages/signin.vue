@@ -75,11 +75,18 @@
 export default {
   layout: 'herolight',
   components: {},
-  //   asyncData ({ store, redirect }) {
-  //     if (store.state.auth.loggedIn === true) {
-  //       return redirect('/alert')
-  //     }
-  //   },
+  // asyncData({ store }) {
+  //   // if (store.state.auth.loggedIn === true) {
+  //   //   return redirect('/alert')
+  //   // }
+  //   if (process.client) {
+  //     store.dispatch('initAuth')
+  //   } else {
+  //     //console.log('server', req)
+  //     // Cookie.set('authKey', 'hakan')
+  //     store.dispatch('initAuth')
+  //   }
+  // },
   data() {
     return {
       userForm: {
@@ -90,6 +97,17 @@ export default {
       errorMessage: null
     }
   },
+  methods: {
+    signinUser() {
+      this.$store.dispatch('initAuth', 'auth-key-from')
+      this.$router.push('/alert')
+    }
+    // getCookie() {
+    //   // this.fromCookie = Cookie.get('authKey')
+    //   this.fromCookie = this.$store.getters.getAuthKey
+    // }
+  },
+
   //   methods: {
   //     async signinUser () {
   //       try {

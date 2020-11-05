@@ -16,6 +16,8 @@
 import mainheader from '~/components/mainheader'
 export default {
   name: 'Herolight',
+  middleware: ['auth'],
+  //middleware: ['session-control'],
   components: {
     mainheader
   },
