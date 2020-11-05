@@ -37,19 +37,46 @@ export const actions = {
   nuxtServerInit(_, { req }) {
     console.log('NuxtServer', req.headers.cookie) // authKey=hakan-test
   },
+  //   initAuth({ commit }, req) {
+  //     if (req) {
+  //       console.log('store', req) // index.js?9101:43 auth-key-from
+  //       commit('setAuthKey', req)
+  //     } else {
+  //       console.log('else bloğu', req)
+  //       commit('setAuthKey', req)
+  //     }
+  //   }
   initAuth({ commit }, req) {
+    let token
     if (req) {
-      console.log('store', req) // index.js?9101:43 auth-key-from
-      commit('setAuthKey', req)
+      // request varsa, Server üzerindeyiz
+      if (!req.headers.cookie) {
+        // request de  cookie yoksa
+        return
+      }
+      // buradaysa  cookie yi alalım
+      if (req.headers.cookie) {
+        //eslint-disable-next-line
+        token = req.headers.cookie
+      } else {
+        // buradaysa cookie yok
+        console.log('cookie yok')
+      }
     } else {
-      console.log('else bloğu', req)
-      commit('setAuthKey', req)
+      // request yoksa, Client üzerindeyiz, token ı localstoragedan alıcaz
+      token = localStorage.getItem('authKey')
+      if (!token) {
+        // token yoksa
+        return
+      }
     }
+    commit('setAuthKey', token)
   }
-  //eslint-disable-next-line
-
 }
 
+//eslint-disable-next-line
+
+//}
 
 // export const actions = {
 //   async nuxtServerInit({ app, route }) {
