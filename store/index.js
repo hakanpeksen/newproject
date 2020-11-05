@@ -1,6 +1,5 @@
 import Cookie from 'js-cookie'
 export const state = () => ({
-  //   token: '',
   authKey: null
 })
 export const getters = {
@@ -17,23 +16,24 @@ export const mutations = {
   },
   clearAuthKey(state) {
     Cookie.remove('authKey')
-    localStorage.removeItem('authKey')
+    Cookie.remove('expiresIn')
+
+    if (process.client) {
+      // Client üzerindeysen sil
+      // sayfa yenilenince  initAuth  ilk server tarafında çalışacağı için, clearAuthKey de çalışacağı  için(localStorage silinmemesi için kontrol ekledik)
+      localStorage.removeItem('authKey')
+      localStorage.removeItem('expiresIn')
+    }
     state.authKey = null
   }
-
-  //   setToken(state, payload) {
-  //     state.token = payload
-  //   },
-  //   clearToken(state) {
-  //     state.token = ''
-  //   }
 }
 export const actions = {
-  nuxtServerInit(_, { req }) {
-    console.log('NuxtServer', req.headers.cookie) // authKey=hakan
-  },
+  // nuxtServerInit(_, { req }) {
+  //   console.log('NuxtServer', req.headers.cookie) // authKey=hakan
+  // },
   initAuth({ commit }, req) {
     let token
+    let expiresIn
     if (req) {
       console.log('Serverdayız')
       // request varsa, Server üzerindeyiz
@@ -43,37 +43,46 @@ export const actions = {
       }
       // buradaysa  cookie yi alalım
       token = req.headers.cookie.split('=')[1]
+      // expiresIn i elde edelim
+      expiresIn = req.headers.cookie
+        .split(';')
+        .find((e) => e.trim().startsWith('expiresIn'))
+      if (expiresIn) {
+        expiresIn = expiresIn.split('=')[1]
+      }
     } else {
       // request yoksa, Client üzerindeyiz, token ı localstoragedan alıcaz
       token = localStorage.getItem('authKey')
-      if (!token) {
-        // token yoksa
-        return
-      }
+      expiresIn = localStorage.getItem('expiresIn')
+    }
+
+    if (new Date().getTime() > +expiresIn || !token) {
+      commit('clearAuthKey')
     }
     commit('setAuthKey', token)
   },
-  login({ commit }, authKey) {
-    Cookie.set('authKey', authKey)
-    localStorage.setItem('authKey', authKey)
-    commit('setAuthKey', authKey)
+  authUser({ commit }, authData) {
+    let authLink =
+      'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key='
+    return this.$axios
+      .post(authLink + process.env.firebaseAPIKEY, {
+        email: authData.userForm.email,
+        password: authData.userForm.password,
+        returnSecureToken: true
+      })
+      .then((res) => {
+        //  expiresIn = 3600 *1000   // 1 saat
+        let expiresIn = new Date().getTime() + +res.data.expiresIn * 1000
+        // 5 sn e ayarladık, /news, /alert de gezinirken 5 sn sonra /signin e attı,diğer pathlere sokmadı
+        // let expiresIn = new Date().getTime() + 5000
+        Cookie.set('authKey', res.data.idToken)
+        Cookie.set('expiresIn', expiresIn)
+        localStorage.setItem('authKey', res.data.idToken)
+        localStorage.setItem('expiresIn', expiresIn)
+        commit('setAuthKey', res.data.idToken)
+      })
   },
   logout({ commit }) {
     commit('clearAuthKey')
   }
 }
-
-//   login({ commit }) {
-//     commit('setToken', 'ACHAAA12345878777777')
-//     window.localStorage.setItem('token', 'ACHAAA12345878777777')
-//     window.localStorage.setItem(
-//       'expirationDate',
-//       new Date().getTime() + 3 * 30 * 1000
-//     )
-//   },
-
-//   setTimeoutTimer({ dispatch }, expiresIn) {
-//     setTimeout(() => {
-//       dispatch('logout')
-//     }, expiresIn)
-//   }

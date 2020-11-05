@@ -79,13 +79,6 @@ export default {
   //   // if (store.state.auth.loggedIn === true) {
   //   //   return redirect('/alert')
   //   // }
-  //   if (process.client) {
-  //     store.dispatch('initAuth')
-  //   } else {
-  //     //console.log('server', req)
-  //     // Cookie.set('authKey', 'hakan')
-  //     store.dispatch('initAuth')
-  //   }
   // },
   data() {
     return {
@@ -99,16 +92,11 @@ export default {
   },
   methods: {
     signinUser() {
-      let authLink =
-        'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key='
-      this.$axios
-        .post(authLink + process.env.firebaseAPIKEY, {
-          email: this.userForm.email,
-          password: this.userForm.password,
-          returnSecureToken: true
+      this.$store
+        .dispatch('authUser', {
+          userForm: this.userForm
         })
-        .then((res) => {
-          this.$store.dispatch('login', res.data.idToken)
+        .then(() => {
           this.$router.push('/alert')
         })
     }
