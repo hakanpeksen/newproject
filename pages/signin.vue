@@ -99,7 +99,7 @@ export default {
   },
   methods: {
     signinUser() {
-      this.$store.dispatch('initAuth', 'auth-key-from')
+      this.$store.dispatch('login', 'auth-key-from')
       this.$router.push('/alert')
     }
     // getCookie() {

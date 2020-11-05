@@ -32,12 +32,14 @@ export default {
   },
   methods: {
     setCookie() {
-      //  Cookie.set('authKey', this.cookieValue, { expires: 1 })
-      this.$store.commit('setAuthKey', this.cookieValue)
+      //Cookie.set('authKey', this.cookieValue, { expires: 1 })
+      localStorage.setItem('authKey', 'hakan')
+
+      // this.$store.commit('setAuthKey', this.cookieValue)
     },
     getCookie() {
       // this.fromCookie = Cookie.get('authKey')
-      this.fromCookie = this.$store.getters.getAuthKey
+      //   this.fromCookie = this.$store.getters.getAuthKey
     }
 
     // onSubmit() {
