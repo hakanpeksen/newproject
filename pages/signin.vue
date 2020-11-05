@@ -99,8 +99,18 @@ export default {
   },
   methods: {
     signinUser() {
-      this.$store.dispatch('login', 'auth-key-from')
-      this.$router.push('/alert')
+      let authLink =
+        'https://www.googleapis.com/identitytoolkit/v3/relyingparty/verifyPassword?key='
+      this.$axios
+        .post(authLink + process.env.firebaseAPIKEY, {
+          email: this.userForm.email,
+          password: this.userForm.password,
+          returnSecureToken: true
+        })
+        .then((res) => {
+          this.$store.dispatch('login', res.data.idToken)
+          this.$router.push('/alert')
+        })
     }
     // getCookie() {
     //   // this.fromCookie = Cookie.get('authKey')

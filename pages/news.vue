@@ -128,6 +128,7 @@
 <script>
 import mainheader from '@/components/mainheader'
 export default {
+  middleware: ['session-control', 'auth'],
   name: 'News',
   components: {
     mainheader

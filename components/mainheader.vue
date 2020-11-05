@@ -55,6 +55,14 @@
             >
               Sign in
             </n-link>
+            <a
+              href="#"
+              class="navbar-item"
+              :class="[theme === 'light' ? '' : 'has-text-white']"
+              @click.prevent="logout"
+            >
+              Logout
+            </a>
             <n-link
               to="/signup"
               class="navbar-item"
@@ -80,6 +88,12 @@ export default {
   data() {
     return {
       isOpen: false
+    }
+  },
+  methods: {
+    logout() {
+      this.$store.dispatch('logout')
+      this.$router.push('/signin')
     }
   }
 }

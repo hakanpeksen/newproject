@@ -15,6 +15,7 @@
 import moment from 'moment'
 import mainheader from '~/components/mainheader'
 export default {
+  middleware: ['session-control', 'auth'],
   name: 'Alert',
   components: {
     mainheader

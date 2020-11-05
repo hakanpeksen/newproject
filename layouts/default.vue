@@ -5,7 +5,6 @@
 import mainfooter from '~/components/mainfooter'
 export default {
   name: 'Default',
-  middleware: ['session-control', 'auth'],
   components: {
     mainfooter
   },

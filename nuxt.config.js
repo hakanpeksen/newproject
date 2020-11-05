@@ -60,6 +60,9 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
+  env: {
+    firebaseAPIKEY: 'AIzaSyB73LfduhCCCnWAdxxquHiwWnp6HjNrfmc'
+  },
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

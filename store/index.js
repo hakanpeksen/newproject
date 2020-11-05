@@ -17,6 +17,7 @@ export const mutations = {
   },
   clearAuthKey(state) {
     Cookie.remove('authKey')
+    localStorage.removeItem('authKey')
     state.authKey = null
   }
 
@@ -56,6 +57,9 @@ export const actions = {
     Cookie.set('authKey', authKey)
     localStorage.setItem('authKey', authKey)
     commit('setAuthKey', authKey)
+  },
+  logout({ commit }) {
+    commit('clearAuthKey')
   }
 }
 
@@ -67,11 +71,7 @@ export const actions = {
 //       new Date().getTime() + 3 * 30 * 1000
 //     )
 //   },
-//   logout({ commit }) {
-//     commit('clearToken')
-//     window.localStorage.removeItem('token')
-//     window.localStorage.removeItem('expirationDate')
-//   },
+
 //   setTimeoutTimer({ dispatch }, expiresIn) {
 //     setTimeout(() => {
 //       dispatch('logout')
