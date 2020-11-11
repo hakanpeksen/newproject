@@ -72,7 +72,6 @@ export const actions = {
         returnSecureToken: true
       })
       .then((res) => {
-        debugger
         //  expiresIn = 3600 *1000   // 1 saat
         let expiresIn = new Date().getTime() + +res.data.expiresIn * 1000
         // 5 sn e ayarladık, /news, /alert de gezinirken 5 sn sonra /signin e attı,diğer pathlere sokmadı
