@@ -68,6 +68,9 @@ export default {
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
     extend(config, ctx) {
+      if (ctx.isDev) {
+        config.devtool = ctx.isClient ? 'source-map' : 'inline-source-map'
+      }
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
@@ -76,7 +79,6 @@ export default {
           loader: 'eslint-loader',
           exclude: /(node_modules)/
         })
-        config.devtool = '#source-map'
       }
     }
   }
